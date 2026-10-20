@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#FFE4EC" />
+  <meta name="description" content="A little birthday surprise, made with love." />
+  <title>kimkim's day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" id="ambient" aria-hidden="true"></div>
+  <!-- Opening scenes: audio begins only from the disc's user gesture. -->
+  <section class="intro-scene" id="intro-scene" aria-label="Start the birthday surprise">
+    <div class="intro-content"><span class="intro-spark">✧ ♡ ✧</span><button type="button" class="vinyl-button" id="vinyl-button" aria-label="Start birthday surprise and play music"><span class="vinyl-disc"><span class="vinyl-label">♡</span></span></button><p class="intro-instruction">Tap the disc for surprise</p></div>
+  </section>
+  <section class="greeting-scene" id="greeting-scene" aria-label="Birthday greeting" hidden><div class="greeting-sparks" aria-hidden="true">✧ · ♡ · ✧</div><h2 class="greeting-words"><span>Happy</span> <span>Birthday,</span> <span>Kimkim!</span> <span>♡</span></h2></section>
+  <audio id="birthday-music" src="./assets/music/birthday-song.mp3" preload="none" loop></audio>
+  <button type="button" class="music-toggle" id="music-toggle" aria-label="Pause music" aria-pressed="true" hidden>♫ <span id="music-status">Pause music</span></button>
+  <main class="home" id="home" hidden>
+
+    <h1>Happiest Birthday<br /><em>My Bebi</em> <span class="heart-word">!</span></h1>
+    <p class="subtitle">Just a little surprise for my baby girl</p>
+    <div class="ornament" aria-hidden="true"><span></span><b>♡</b><span></span></div>
+    <section class="cards" aria-label="Choose a birthday surprise">
+      <article class="flip-card" data-surprise="letter">
+        <div class="flip-inner">
+          <button type="button" class="card-face card-front" aria-label="Flip A Letter for You card" aria-expanded="false">
+            <span class="card-index">01 / 03</span><span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 160 145" fill="none"><rect x="21" y="43" width="118" height="77" rx="9" fill="#FFE8F0" stroke="#BD7892" stroke-width="2"/><path d="M21 50L80 91L139 50" stroke="#BD7892" stroke-width="2"/><path d="M21 113L65 81M139 113L95 81" stroke="#BD7892" stroke-width="2"/><path d="M80 73c-11-13-27 3 0 20 27-17 11-33 0-20z" fill="#DC92AA"/><path d="M75 25c-5-7-15 1 0 12 15-11 5-19 0-12z" fill="#E5A0B7"/><path d="M114 19l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#D8A3B5"/></svg>
+            </span><h2>A Letter for You</h2><p>Words from my heart (tamis)</p><span class="tap">Tap to reveal <span aria-hidden="true">↗</span></span>
+          </button>
+
+          <div class="card-face card-back"><span class="back-star">✧</span><p class="back-kicker">sealed with love</p><h2>Something I've<br />been meaning to say…</h2><button class="open-btn" type="button" data-open="letter">Open Surprise <span aria-hidden="true">↗</span></button><button class="flip-back" type="button">↶ flip back</button></div>
+        </div>
+      </article>
+      <article class="flip-card" data-surprise="cake">
+
+        <div class="flip-inner">
+          <button type="button" class="card-face card-front" aria-label="Flip Make a Wish card" aria-expanded="false">
+            <span class="card-index">02 / 03</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 160 145" fill="none"><rect x="38" y="83" width="84" height="39" rx="7" fill="#E9AAC1" stroke="#BC7891" stroke-width="2"/><path d="M38 89q8-11 17 0t17 0t17 0t17 0t16 0v-9H38z" fill="#FFF9F5" stroke="#BC7891" stroke-width="2"/><rect x="53" y="53" width="54" height="28" rx="6" fill="#F6C1D4" stroke="#BC7891" stroke-width="2"/><path d="M53 60q6-7 13 0t13 0t13 0t15 0v-8H53z" fill="#FFF9F5"/><rect x="77" y="29" width="6" height="23" rx="2" fill="#F8E5BA"/><path d="M80 25c-8-8 0-19 0-19s8 11 0 19z" fill="#E6AB71"/><path d="M29 126h102" stroke="#BC7891" stroke-width="3" stroke-linecap="round"/><path d="M25 29l2 6 6 2-6 2-2 6-2-6-6-2 6-2zM130 38l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#DEA0B5"/></svg></span><h2>Make a Wish</h2><p>A little celebration for you.</p><span class="tap">Tap to reveal <span aria-hidden="true">↗</span></span>
+          </button>
+          <div class="card-face card-back"><span class="back-star">✧</span><p class="back-kicker">today is all about you</p><h2>Blow<br />& make a wish</h2><button class="open-btn" type="button" data-open="cake">Open Surprise <span aria-hidden="true">↗</span></button><button class="flip-back" type="button">↶ flip back</button></div>
+        </div>
+      </article>
+      <article class="flip-card" data-surprise="flowers">
+
+        <div class="flip-inner">
+          <button type="button" class="card-face card-front" aria-label="Flip Flowers for You card" aria-expanded="false">
+            <span class="card-index">03 / 03</span><span class="card-icon" aria-hidden="true"><svg viewBox="0 0 160 145" fill="none"><path d="M80 129L72 68M80 129l25-60M80 129L49 79" stroke="#7E9B79" stroke-width="3" stroke-linecap="round"/><path d="M74 102q-20-4-20-19 17-2 20 19zM90 103q18-16 26-12-7 18-26 12z" fill="#9FB99C"/><g fill="#F4B5C9" stroke="#BE839A" stroke-width="1.5"><circle cx="74" cy="53" r="13"/><circle cx="60" cy="56" r="13"/><circle cx="64" cy="40" r="13"/><circle cx="79" cy="39" r="12"/><circle cx="73" cy="48" r="11"/></g><circle cx="71" cy="49" r="6" fill="#D98CA8"/><g fill="#F8D0DB" stroke="#BE839A" stroke-width="1.5"><ellipse cx="108" cy="54" rx="11" ry="20" transform="rotate(25 108 54)"/><ellipse cx="99" cy="54" rx="11" ry="20" transform="rotate(-25 99 54)"/></g><g fill="#FFF9F5" stroke="#C9A4A7" stroke-width="1"><ellipse cx="42" cy="69" rx="8" ry="14" transform="rotate(-35 42 69)"/><ellipse cx="55" cy="67" rx="8" ry="14" transform="rotate(35 55 67)"/><ellipse cx="48" cy="58" rx="7" ry="13"/></g><circle cx="49" cy="68" r="5" fill="#E5C38D"/><path d="M46 104l34 25 32-25-12 31H58z" fill="#FBE0E9" stroke="#BE839A" stroke-width="1.5"/><path d="M72 114q-12-8-13 2 2 9 14 2-5 11 7 14 9-5-3-13 12 9 19 0-1-12-16-6" fill="#DB91AD"/></svg></span><h2>Flowers for You</h2><p>Pretty flowers for my pretty lovelove</p><span class="tap">Tap to reveal <span aria-hidden="true">↗</span></span>
+          </button>
+          <div class="card-face card-back"><span class="back-star">✧</span><p class="back-kicker">a bouquet of love</p><h2>Flowers that<br />never have to fade</h2><button class="open-btn" type="button" data-open="flowers">Open Surprise <span aria-hidden="true">↗</span></button><button class="flip-back" type="button">↶ flip back</button></div>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="wishes-section" aria-labelledby="wishes-heading"><p class="eyebrow">one more little surprise ✧</p><h2 id="wishes-heading">A Bottle Full of Wishes</h2><p class="subtitle">My wishes for you</p><button type="button" id="bottle-open" class="bottle-button" aria-label="Open a bottle full of wishes"><span class="bottle-art"><span class="bottle-cork"></span><span class="bottle-neck"></span><span class="bottle-body"><span class="rolled-note n1"></span><span class="rolled-note n2"></span><span class="rolled-note n3"></span><span class="rolled-note n4"></span><span class="rolled-note n5"></span></span></span></button><p class="bottle-hint" id="bottle-hint">Tap the bottle to open</p></section>
+    <p class="footer-note"><span>♡</span> just for kimkim <span>♡</span></p>
+  </main>
+
+  <div class="modal" id="letter-modal" role="dialog" aria-modal="true" aria-labelledby="letter-heading" aria-hidden="true" hidden>
+    <button type="button" class="close-modal" data-close aria-label="Close letter">×</button><div class="modal-inner letter-inner"><p class="section-kicker">sealed with love · 01</p><h2 id="letter-heading">A Letter for You <span>♡</span></h2><p class="section-sub">Some of my thoughts</p>
+      <div class="envelope-stage" id="envelope-stage"><div class="envelope-wrap" id="envelope-wrap"><div class="envelope-letter">for you, always</div><div class="envelope-back"></div><div class="envelope-front"></div><div class="envelope-flap"></div><div class="wax-seal">♥</div></div><p class="stage-hint">a little note sealed with love</p></div>
+      <section class="letter-paper" id="letter-paper" hidden aria-label="Birthday letter"><div class="letter-paper-top">happy birthday, my kimkim! <span>♡</span></div><div class="letter-copy" id="letter-copy" aria-live="polite"></div><div class="letter-controls"><button type="button" class="outline-btn" id="letter-prev">← Previous</button><span id="letter-counter">1 / 4</span><button type="button" class="pink-btn" id="letter-next">Next →</button></div></section>
+      <button type="button" class="text-action" id="letter-replay">↻ Replay envelope</button>
+    </div>
+  </div>
+
+  <div class="modal" id="cake-modal" role="dialog" aria-modal="true" aria-labelledby="cake-heading" aria-hidden="true" hidden>
+    <button type="button" class="close-modal" data-close aria-label="Close birthday cake">×</button><div class="confetti-field" id="confetti-field" aria-hidden="true"></div><div class="modal-inner cake-inner"><p class="section-kicker">your special day · 02</p><h2 id="cake-heading" class="cake-title">Happy Birthday,<br /><em>My Kimkim!</em> ♡</h2><p class="section-sub">Close your eyes and make a wish :)</p>
+      <div class="cake-scene" id="cake-scene"><div class="cake-halo"></div><div class="cake" role="img" aria-label="A pink three-tier birthday cake with a candle"><div class="candle"><div class="flame"></div><div class="wick"></div><div class="candle-stick"></div></div><div class="cake-tier tier-top"><div class="frosting"></div><div class="pearls"></div><div class="strawberry s1"></div></div><div class="cake-tier tier-middle"><div class="frosting"></div><div class="pearls"></div><div class="strawberry s2"></div></div><div class="cake-tier tier-bottom"><div class="frosting"></div><div class="pearls"></div></div><div class="cake-plate"></div></div></div>
+      <p class="wish-response" id="wish-response" aria-live="polite"></p><div class="modal-actions"><button type="button" class="pink-btn" id="make-wish" disabled>Make a Wish</button><button type="button" class="outline-btn" id="cake-replay">↻ Replay Celebration</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="flowers-modal" role="dialog" aria-modal="true" aria-labelledby="flowers-heading" aria-hidden="true" hidden>
+    <button type="button" class="close-modal" data-close aria-label="Close flowers">×</button><div class="modal-inner flower-inner"><p class="section-kicker">flowers from me to you · 03</p><h2 id="flowers-heading">A Bouquet for You <span>♡</span></h2><p class="section-sub flower-quote" id="flower-quote">If I could, I'd give you flowers every single day</p>
+      <div class="bouquet-scene" id="bouquet-scene"><div class="petal-field" id="petal-field" aria-hidden="true"></div><svg class="bouquet-svg" viewBox="0 0 420 450" role="img" aria-label="Illustrated blooming bouquet of roses, tulips, daisies and baby's breath">
+        <defs><linearGradient id="paperGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFE7EF"/><stop offset="1" stop-color="#E9B3C6"/></linearGradient><linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFDEE9"/><stop offset="1" stop-color="#DE89A8"/></linearGradient></defs>
+        <g class="stems" fill="none" stroke="#839D7E" stroke-width="5" stroke-linecap="round"><path d="M209 337L115 138M209 337L171 99M209 337L246 108M209 337L309 153M209 337L84 213M209 337L332 224M209 337L207 154"/></g>
+        <g fill="#A5BF9B"><path d="M181 270q-56-7-58-41 38-6 58 41z"/><path d="M230 248q48-39 66-25-13 35-66 25z"/><path d="M154 207q-42-28-37-49 34 8 37 49z"/><path d="M256 189q37-36 61-23-19 35-61 23z"/></g>
+        <g class="flower bloom-1" transform="translate(105 127)"><path d="M0 14C-39-5-36-44-9-35-2-61 23-58 23-32 51-37 49-6 20 16Z" fill="url(#roseGrad)" stroke="#C77997" stroke-width="2"/><path d="M-18-11Q-7-34 14-14Q-11-21-6 2Q9-17 24 0Q11 27-8 12" fill="none" stroke="#C77997" stroke-width="2.5"/><path d="M-8 4Q7-7 14 4Q10 14-2 11" fill="none" stroke="#B76687" stroke-width="2"/></g>
+        <g class="flower bloom-2" transform="translate(171 92)"><path d="M-26 12Q-44-30-18-43L0-20 18-43Q44-30 26 12Q0 34-26 12Z" fill="#F6B8CD" stroke="#C77997" stroke-width="2"/><path d="M0-20V24M-18-43Q-18-5 0 23M18-43Q18-5 0 23" stroke="#DA8FA9" stroke-width="2" fill="none"/></g>
+        <g class="flower bloom-3" transform="translate(252 106)"><path d="M0 15C-33 3-43-25-17-35-14-60 19-59 22-30 46-23 35 10 13 18Z" fill="#EB9EB9" stroke="#C77997" stroke-width="2"/><path d="M-20-16Q4-30 17-8Q-1-14-10 6Q7-7 21 4Q6 22-10 12" fill="none" stroke="#BE6E8F" stroke-width="2.5"/><circle cx="2" cy="7" r="5" fill="#D67E9D"/></g>
+        <g class="flower bloom-4" transform="translate(312 157)"><path d="M-26 8Q-43-31-17-43L0-18 18-43Q43-27 24 10Q0 30-26 8Z" fill="#FFD4E0" stroke="#CF8DA4" stroke-width="2"/><path d="M0-18V23M-17-43Q-16-3 0 21M18-43Q17-4 0 21" stroke="#DBA0B3" stroke-width="2" fill="none"/></g>
+        <g class="flower bloom-5" transform="translate(80 209)"><g fill="#FFFDF8" stroke="#D2B0B4" stroke-width="1.5"><ellipse cy="-20" rx="11" ry="23"/><ellipse cy="20" rx="11" ry="23"/><ellipse cx="-20" rx="23" ry="11"/><ellipse cx="20" rx="23" ry="11"/><ellipse transform="rotate(45)" cy="-20" rx="10" ry="22"/><ellipse transform="rotate(-45)" cy="-20" rx="10" ry="22"/></g><circle r="12" fill="#EED7A6"/><circle r="5" fill="#E1BD79"/></g>
+        <g class="flower bloom-6" transform="translate(339 221)"><g fill="#FFFDF8" stroke="#D2B0B4" stroke-width="1.5"><ellipse cy="-19" rx="10" ry="21"/><ellipse cy="19" rx="10" ry="21"/><ellipse cx="-19" rx="21" ry="10"/><ellipse cx="19" rx="21" ry="10"/><ellipse transform="rotate(45)" cy="-19" rx="10" ry="20"/><ellipse transform="rotate(-45)" cy="-19" rx="10" ry="20"/></g><circle r="11" fill="#EED7A6"/><circle r="5" fill="#E1BD79"/></g>
+        <g class="flower bloom-7" transform="translate(208 157)" fill="#FFFDFC" stroke="#DABBC5" stroke-width="1"><path d="M0 45V-9M0 6L-26-27M0 23L26-21" fill="none" stroke="#8CA684" stroke-width="2"/><circle cy="-13" r="8"/><circle cx="-27" cy="-29" r="7"/><circle cx="26" cy="-22" r="7"/><circle cx="-14" cy="2" r="5"/><circle cx="17" cy="11" r="6"/></g>
+        <g class="wrapper"><path d="M73 248L208 408 350 248 292 251 210 307 127 251Z" fill="url(#paperGrad)" stroke="#C989A0" stroke-width="2"/><path d="M73 248L208 408 188 298 127 251Z" fill="#F9D1E0" opacity=".8"/><path d="M350 248L208 408 230 298 292 251Z" fill="#F5C7D8" opacity=".8"/><path d="M127 251L210 307 292 251" fill="none" stroke="#DDA8BB" stroke-width="2"/><path d="M178 345Q206 361 243 343" fill="none" stroke="#C6809C" stroke-width="3"/></g>
+        <g class="bow"><path d="M205 341Q151 298 142 333Q145 359 204 348Q162 365 166 389Q203 381 210 353Q219 384 252 389Q258 360 216 347Q273 360 275 333Q258 302 214 341" fill="#DB88A7" stroke="#BD6D8C" stroke-width="2"/><path d="M206 344Q178 324 157 334M214 344Q243 323 262 335" fill="none" stroke="#FCE2E9" stroke-width="2"/><ellipse cx="210" cy="347" rx="13" ry="11" fill="#C87597" stroke="#B36383" stroke-width="2"/></g>
+      </svg></div><p class="flower-note" id="flower-note" aria-live="polite" hidden></p><div class="modal-actions"><button type="button" class="pink-btn" id="flower-secret">One More Little Surprise</button><button type="button" class="outline-btn" id="flower-replay">↻ Watch them bloom</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="wishes-modal" role="dialog" aria-modal="true" aria-labelledby="wish-heading" aria-hidden="true" hidden><button type="button" class="close-modal" data-close aria-label="Close wishes">×</button><div class="modal-inner wishes-inner"><p class="section-kicker">five wishes for my lovelove</p><h2 id="wish-heading">A Bottle Full of Wishes</h2><div class="wish-animation" id="wish-animation"><span class="wish-roll" aria-hidden="true">♡</span></div><section class="wish-parchment" id="wish-parchment" hidden><p class="wish-count" id="wish-count">Wish 1 of 5</p><h3 id="wish-title"></h3><p id="wish-copy"></p></section><p class="wish-ending" id="wish-ending" hidden>I always thank god for a wish come true like you</p><div class="modal-actions"><button type="button" class="pink-btn" id="wish-next" disabled>Next Wish ♡</button><button type="button" class="outline-btn" id="wishes-replay">↻ Read Our Wishes Again</button></div></div></div>
+</body>
+</html>
